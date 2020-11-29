@@ -1,0 +1,23 @@
+#bin/bash
+#ini file memanggil suhu di directory /usr/bin
+#kelompok 3 mikrokontroler, informatika , universitas tadulako
+
+while true; do
+
+echo;
+echo;
+echo -e "         \e[30;1mkelompok 13 mikrokontroler informatika " 
+echo -e " \e[32;1m########################################################\e[0m"
+echo -e " \e[32;1m##\e[0m               \e[39;1mSENSOR SUHU SEDERHANA                \e[0m\e[32;1m##\e[0m"
+echo -e " \e[32;1m########################################################\e[0m"
+
+echo;
+echo -e "              \e[33;1msuhu yang terdeteksi sekarang: "
+panas=$(bash 'suhu')
+panas=$(echo $panas|awk -F 'sekarang' '{print $2}'|awk -F 'www' '{print $1}')
+echo;
+echo -e "           \e[34;1m $((panas*9/5+32)) °F         \e[31;1m$panas°C       \e[35;1m $((panas+273)) °K \e[0m"  
+sleep 3
+
+clear
+done

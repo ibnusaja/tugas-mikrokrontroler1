@@ -1,0 +1,15 @@
+#!/bin/bash
+#file ini bertugas memanggil temprature
+
+echo;
+echo;
+echo "suhu terdeteksi sekarang "
+
+tes=$(cat /sys/bus/w1/devices/28-030e97941fbd/temperature)
+echo $((tes/1000)) 
+#read *
+#echo ((x/1000)) 
+
+echo " wwwww"
+
+
